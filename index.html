@@ -1,111 +1,230 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rádio 87 FM</title>
+<title>Rádio Oficial FM 87.9 - Iguape/SP</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-body {
-    background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
-    color: white;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+background:#0d1117;
+color:white;
 }
 
-.container {
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    max-width: 400px;
+header{
+background:linear-gradient(135deg,#005eff,#00a2ff);
+padding:50px;
+text-align:center;
 }
 
-.logo {
-    width: 140px;
-    height: 140px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+.logo img{
+width:220px;
+max-width:100%;
+border-radius:10px;
 }
 
-h1 {
-    font-size: 26px;
-    margin-bottom: 10px;
+.frequencia{
+font-size:32px;
+font-weight:bold;
+margin-top:10px;
 }
 
-p {
-    color: #aaa;
-    margin-bottom: 30px;
+.slogan{
+margin-top:15px;
+font-size:18px;
+line-height:1.8;
 }
 
-.player {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
 }
 
-button {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 12px;
-    background: #ff0055;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+.player-box{
+background:#161b22;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,.5);
 }
 
-button:hover {
-    background: #e6004c;
-    transform: scale(1.03);
+.live{
+display:inline-block;
+background:red;
+padding:10px 20px;
+border-radius:30px;
+font-weight:bold;
+margin-bottom:20px;
+animation:pulse 1s infinite;
 }
 
-audio {
-    width: 100%;
-    margin-top: 15px;
+@keyframes pulse{
+50%{
+transform:scale(1.1);
 }
+}
+
+audio{
+width:100%;
+margin-top:20px;
+}
+
+.redes{
+margin-top:40px;
+text-align:center;
+}
+
+.redes a{
+color:white;
+text-decoration:none;
+margin:10px;
+padding:12px 20px;
+background:#1f2937;
+border-radius:10px;
+display:inline-block;
+transition:0.3s;
+}
+
+.redes a:hover{
+background:#374151;
+}
+
+.noticias{
+margin-top:50px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.card{
+background:#161b22;
+padding:20px;
+border-radius:15px;
+}
+
+footer{
+margin-top:50px;
+padding:30px;
+text-align:center;
+background:#111;
+}
+
 </style>
 </head>
 
 <body>
 
+<header>
+
+<div class="logo">
+<!-- Salve a logo gerada como logo-radio.png -->
+<img src="logo-radio.png" alt="Rádio Oficial FM 87.9">
+</div>
+
+<h1>📻 Rádio Oficial FM</h1>
+
+<div class="frequencia">
+87.9 FM
+</div>
+
+<div class="slogan">
+📍 Iguape - SP<br>
+🎙 Programa ao vivo das 09h às 11h
+</div>
+
+</header>
+
 <div class="container">
 
-    <img class="logo" src="https://via.placeholder.com/150" alt="Logo Rádio">
+<div class="player-box">
 
-    <h1>Rádio 87 FM</h1>
-    <p>Ao vivo 24h no ar 🎧</p>
+<div id="statusRadio" class="live">
+🔴 CARREGANDO...
+</div>
 
-    <div class="player">
+<h2>Ouça Nossa Programação</h2>
 
-        <button onclick="document.getElementById('radio').play()">
-            ▶ Tocar Rádio
-        </button>
+<audio controls autoplay>
+    <!-- Quando descobrir o streaming substitua abaixo -->
+    <source src="LINK_DO_STREAMING" type="audio/mpeg">
+</audio>
 
-        <button style="margin-top:10px;background:#333" onclick="document.getElementById('radio').pause()">
-            ⏸ Pausar
-        </button>
-
-        <audio id="radio" src="SEU_STREAM_AQUI"></audio>
-
-    </div>
+<p style="margin-top:20px;">
+Transmitindo diretamente de Iguape/SP.
+</p>
 
 </div>
+
+<div class="redes">
+
+<h2>Nossas Redes Sociais</h2>
+
+<br>
+
+<a href="https://www.instagram.com/radiooficialfm87.9?igsh=MXkyZW1wcDk2cHJ2OA=="
+target="_blank">
+📸 Instagram Oficial
+</a>
+
+</div>
+
+<div class="noticias">
+
+<div class="card">
+<h3>🎶 Programação Musical</h3>
+<p>As melhores músicas nacionais e internacionais.</p>
+</div>
+
+<div class="card">
+<h3>📻 Rádio Comunitária</h3>
+<p>Levando informação, cultura e entretenimento para Iguape e região.</p>
+</div>
+
+<div class="card">
+<h3>🎤 Participação do Ouvinte</h3>
+<p>Acompanhe as novidades pelo Instagram oficial.</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>Rádio Oficial FM 87.9</h3>
+
+<p>
+Iguape/SP • Todos os direitos reservados © 2026
+</p>
+
+</footer>
+
+<script>
+
+const hora = new Date().getHours();
+const status = document.getElementById("statusRadio");
+
+if(hora >= 9 && hora < 11){
+    status.innerHTML = "🔴 AO VIVO AGORA";
+    status.style.background = "#dc2626";
+}else{
+    status.innerHTML = "⚫ FORA DO AR";
+    status.style.background = "#6b7280";
+}
+
+</script>
 
 </body>
 </html>
